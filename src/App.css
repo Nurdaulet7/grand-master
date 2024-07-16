@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+:root {
+  --body-color: #f3f3f3;
+  --primary-color: #054aa5;
+  --header-color: #ffffff;
+  --text-color: #000000;
+  --card-background: #d9d9d9;
+  --footer-color: #054aa5;
+
+  --tran-02: all 0.2s ease;
+  --tran-03: all 0.3s ease;
+  --tran-04: all 0.4s ease;
+  --tran-05: all 0.5s ease;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  height: 100vh;
+  background-color: var(--body-color);
+  transition: var(--tran-04);
+}
