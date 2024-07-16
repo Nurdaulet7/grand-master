@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.content-1 {
+  margin-top: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+}
+
+.content-1 .content-text {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  gap: 90px;
+}
+
+.content-1 .content-text button {
+  width: 50%;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--primary-color);
+  color: var(--header-color);
+}
+
+.content-1 .content-text .text h1 {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.content-1 .content-text .text p {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.content-1 .content-img img {
+  height: 600px;
+}
+
+.content-2 {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-2 h1 {
+  padding: 50px 0;
+  color: var(--primary-color);
+  font-size: 40px;
+  font-weight: 800;
+}
+
+.content-2 .content-infos {
+  width: 100%;
+}
+
+.content-3 {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-3 h1 {
+  margin: 100px 0;
+}
+
+.content-3 .course-details {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  text-align: center;
+}
