@@ -4,6 +4,7 @@ import course2 from "../../images/course2.png";
 import course3 from "../../images/course3.png";
 import course4 from "../../images/course4.png";
 import course5 from "../../images/course5Python.png";
+import styles from "./Courses.module.css";
 
 let courses = [
   {
@@ -44,7 +45,20 @@ let courses = [
 ];
 
 const Courses = () => {
-  return <></>;
+  return (
+    <>
+      {courses.map((course, index) => (
+        <div key={index} className={styles["course-card"]}>
+          <img src={course.photo} alt={course.title} />
+          <div className={styles["course-text"]}>
+            <h2>{course.title}</h2>
+            <p>{course.description}</p>
+          </div>
+          <a href="">подробности</a>
+        </div>
+      ))}
+    </>
+  );
 };
 
 export default Courses;

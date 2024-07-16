@@ -1,0 +1,39 @@
+.course-step {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.course-step img {
+  width: 140px;
+  height: 140px;
+}
+
+.course-step {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+  background-color: var(--header-color);
+  height: 140px;
+  border-radius: 100px 10px 10px 100px;
+}
+
+.course-step .blueBlock {
+  height: 80px;
+  padding: 25px;
+  background-color: var(--primary-color);
+  position: relative;
+  left: 20px;
+  z-index: -1;
+  border-radius: 10px;
+}
+
+.reverse {
+  border-radius: 10px 100px 100px 10px;
+  flex-direction: row-reverse;
+  left: -200px;
+}
+
+.reverse .blueBlock {
+  left: -20px;
+}

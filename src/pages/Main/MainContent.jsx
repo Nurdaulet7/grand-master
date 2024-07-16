@@ -4,6 +4,7 @@ import styles from "./MainContent.module.css";
 import About from "../../components/About";
 import CourseDetails from "./CourseDetails";
 import Courses from "./Courses";
+import CourseSteps from "./CourseSteps";
 
 function MainContent() {
   return (
@@ -44,6 +45,16 @@ function MainContent() {
         <div className={styles["courses-container"]}>
           <Courses />
         </div>
+      </div>
+      <div className={styles["content-5"]}>
+        <h1>Этапы обучения на курсе</h1>
+        <div className={styles["course-steps-container"]}>
+          <CourseSteps />
+        </div>
+      </div>
+      <div className={styles["content-6"]}>
+        <h1>Наша команда</h1>
+        <div className={styles["slider"]}></div>
       </div>
     </div>
   );

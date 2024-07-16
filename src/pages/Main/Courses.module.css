@@ -1,0 +1,43 @@
+.course-card {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 30%;
+  padding: 40px;
+  border-radius: 10px;
+  background-color: var(--header-color);
+}
+
+.course-card img {
+  width: 57px;
+}
+
+.course-card .course-text {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.course-card .course-text h2 {
+  font-size: 22px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.course-card .course-text p {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.7;
+  text-transform: uppercase;
+}
+
+.course-card a {
+  color: black;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.course-card a::after {
+  content: " >";
+  font-weight: bold;
+}
