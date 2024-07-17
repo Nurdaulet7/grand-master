@@ -57,10 +57,10 @@ function MainContent() {
           <CourseSteps />
         </div>
       </div>
-      {/* <div className={styles["content-6"]}>
+      <div className={cn(styles["content-6"], styles.title)}>
         <h1>Наша команда</h1>
-        <div className={styles["slider"]}></div>
-      </div> */}
+        <div className={styles["slider"]}>{/* <Carousel1 /> */}</div>
+      </div>
       <div className={cn(styles["content-7"], styles.title)}>
         <h1>Чему ты научишься на курсе</h1>
         <div className={styles["learning-outcomes-container"]}>
