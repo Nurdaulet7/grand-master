@@ -1,0 +1,69 @@
+.feedback-container {
+  padding: 100px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.feedback {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.feedback .links {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.feedback .links * {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-self: start;
+  width: 40%;
+}
+
+.feedback .links * * {
+  width: 100%;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+form {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+form label {
+  font-size: 45px;
+  font-weight: bold;
+}
+
+form .form-center {
+  display: flex;
+  justify-content: space-between;
+}
+
+form .form-center input {
+  width: 47%;
+}
+
+form input,
+textarea {
+  border: none;
+  padding: 20px;
+  border-radius: 10px;
+  color: var(--card-text-color);
+  font-weight: 600;
+  background-color: var(--card-background-color);
+}
+
+form > input:last-child {
+  background-color: var(--primary-color);
+  color: var(--header-color);
+}

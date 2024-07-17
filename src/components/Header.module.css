@@ -5,10 +5,15 @@
 }
 
 .header {
+  position: fixed;
+  top: 0;
   width: 100%;
   background-color: var(--header-color);
   font-size: 14px;
   font-weight: regular;
+  -webkit-box-shadow: 0px 5px 5px -5px rgba(34, 60, 80, 0.6);
+  -moz-box-shadow: 0px 5px 5px -5px rgba(34, 60, 80, 0.6);
+  box-shadow: 0px 5px 5px -5px rgba(34, 60, 80, 0.6);
 }
 
 .topHeader {

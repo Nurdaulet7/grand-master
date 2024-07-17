@@ -1,0 +1,11 @@
+.partner-container {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.partner-container img {
+  max-width: 350px;
+  max-height: 130px;
+}

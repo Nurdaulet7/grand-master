@@ -8,6 +8,8 @@ import CourseSteps from "./CourseSteps";
 import LearningOutcomes from "./LearningOutcomes";
 import cn from "classnames";
 import Teachers from "./Teachers";
+import Accordion from "./Accordian";
+import Partners from "./Partners";
 
 function MainContent() {
   return (
@@ -69,6 +71,16 @@ function MainContent() {
         <h1>Преподаватели</h1>
         <div className={styles["learning-outcomes-container"]}>
           <Teachers />
+        </div>
+      </div>
+      <div className={cn(styles["content-9"], styles.title2)}>
+        <h1>Часто задаваемые вопросы</h1>
+        <Accordion />
+      </div>
+      <div className={cn(styles["content-10"], styles.title2)}>
+        <h1>Наши партнеры</h1>
+        <div className={styles["partners-container"]}>
+          <Partners />
         </div>
       </div>
     </div>
