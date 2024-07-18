@@ -79,12 +79,13 @@
 
 .bottomHeader {
   width: 100%;
+  height: calc(70px + 20 * (100vw / 1920));
   display: flex;
   justify-content: center;
 }
 
 .bottomHeader .bottom_content img {
-  height: 43px;
+  height: calc(30px + 13 * (100vw / 1920));
 }
 
 .bottomHeader .bottom_content p {

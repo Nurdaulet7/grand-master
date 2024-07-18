@@ -11,3 +11,9 @@
   max-width: 300px;
   max-height: 130px;
 }
+
+@media (max-width: 640px) {
+  .partner-container img {
+    max-width: 250px;
+  }
+}
