@@ -1,15 +1,28 @@
 .card-container {
-  width: 360px;
-  height: 334px;
   display: flex;
-  gap: 30px;
   flex-direction: column;
+  gap: 30px;
+  height: 334px;
+  max-width: 350px;
   align-items: center;
   justify-content: center;
   text-align: center;
   padding: 50px 40px;
   background-color: var(--card-background-color);
   border-radius: 15px;
+}
+
+@media (max-width: 1024px) {
+  .card-container {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 800px) {
+  .card-container {
+    max-width: none;
+    width: 100%;
+  }
 }
 
 .card-container img {

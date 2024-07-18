@@ -29,9 +29,7 @@ function MainContent() {
           </div>
           <button>Получить консультацию</button>
         </div>
-        <div className={styles["content_img"]}>
-          <img src={content_img} alt="img" />
-        </div>
+        <img src={content_img} alt="img" />
       </div>
       <div className={cn(styles["content-2"])}>
         <h1>Почему мы?</h1>

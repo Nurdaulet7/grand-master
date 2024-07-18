@@ -1,29 +1,30 @@
 .consultation-container {
   background-color: var(--primary-color);
-  padding: 80px 150px;
+  padding: calc(20px + 60 * (100vw / 1920)) calc(0px + 150 * (100vw / 1920));
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .consultation-container .form-container {
-  width: 90%;
+  width: 100%;
   display: flex;
   gap: 20px;
   flex-direction: column;
-  padding: 50px;
+  padding: calc(30px + 20 * (100vw / 1920));
   border-radius: 20px;
   background-color: var(--header-color);
 }
 
 .consultation-container .form-container h1 {
-  font-size: 50px;
+  font-size: calc(20px + 30 * (100vw / 1920));
   font-weight: bold;
 }
 
 .consultation-container .form-container form {
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -44,4 +45,38 @@
 
 .consultation-container .form-container p {
   font-size: 12px;
+}
+
+@media (max-width: 1280px) {
+  .consultation-container .form-container form input {
+    width: 30%;
+  }
+
+  .consultation-container .form-container form input:last-child {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .consultation-container .form-container form input {
+    width: 47%;
+  }
+
+  .consultation-container .form-container form input:last-child {
+    width: 47%;
+  }
+}
+
+@media (max-width: 800px) {
+  .consultation-container {
+    text-align: center;
+  }
+
+  .consultation-container .form-container form input {
+    width: 100%;
+  }
+
+  .consultation-container .form-container form input:last-child {
+    width: 100%;
+  }
 }

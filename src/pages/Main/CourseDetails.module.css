@@ -1,9 +1,12 @@
 .card {
   width: 30%;
+  /* max-width: 450px; */
+  min-width: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
   gap: 30px;
 }
 
@@ -13,11 +16,11 @@
 }
 
 .card h2 {
-  font-size: 30px;
+  font-size: calc(25px + 5 * (100vw / 1920));
   font-weight: bold;
 }
 
 .card p {
-  font-size: 20px;
+  font-size: calc(16px + 4 * (100vw / 1920));
   font-weight: 600;
 }

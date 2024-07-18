@@ -5,7 +5,7 @@
 }
 
 .main {
-  margin: 170px 0;
+  margin: 170px 0 50px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -15,6 +15,7 @@
 
 .content-1 {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   width: 80%;
@@ -23,12 +24,14 @@
 .content-1 .content-text {
   display: flex;
   flex-direction: column;
-  width: 40%;
-  gap: 90px;
+  /* width: 40%; */
+  min-width: 420px;
+  width: 50%;
+  gap: calc(15px + 35 * (100vw / 1920));
 }
 
 .content-1 .content-text button {
-  width: 50%;
+  width: 55%;
   font-size: 15px;
   font-weight: 500;
   padding: 14px;
@@ -39,19 +42,75 @@
   cursor: pointer;
 }
 
-.content-1 .content-text .text h1 {
-  font-size: 50px;
-  font-weight: bold;
+.content-1 .content-text .text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .content-1 .content-text .text p {
-  font-size: 20px;
+  font-size: calc(16px + 4 * (100vw / 1920));
   font-weight: 500;
 }
 
-.content-1 .content-img img {
-  height: 600px;
+.content-1 .content-text .text h1 {
+  font-size: calc(35px + 15 * (100vw / 1920));
+  font-weight: bold;
 }
+
+.content-1 img {
+  min-width: 400px;
+  width: 40%;
+}
+
+@media (max-width: 1280px) {
+}
+
+@media (max-width: 1024px) {
+  .content-1 {
+    gap: 30px;
+    justify-content: center;
+  }
+
+  .content-1 .content-text button {
+    width: 100%;
+  }
+
+  .content-1 .content-text {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 450px;
+    /* gap: 20px; */
+  }
+
+  .content-1 img {
+    width: 100%;
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 640px) {
+  .content-1 {
+    gap: 30px;
+    justify-content: center;
+  }
+
+  .content-1 .content-text {
+    min-width: 300px;
+    /* gap: 20px; */
+  }
+
+  .content-1 img {
+    width: 100%;
+    max-width: 350px;
+    min-width: 300px;
+  }
+}
+
+/* (max-width: 800px)
+(max-width: 1024px)
+(max-width: 1280px) */
 
 .content-2 {
   width: 80%;
@@ -64,13 +123,22 @@
 .content-2 h1 {
   padding: 50px 0;
   color: var(--primary-color);
-  font-size: 40px;
+  font-size: calc(30px + 10 * (100vw / 1920));
   font-weight: 800;
   text-transform: uppercase;
 }
 
-.content-2 .content-infos {
-  width: 100%;
+.content-2 .content_infos {
+  /* width: 100%; */
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+
+@media (max-width: 1024px) {
+  .content-2 .content_infos {
+    gap: 20px;
+  }
 }
 
 .content-3 {
@@ -82,14 +150,18 @@
 }
 
 .content-3 .course-details {
-  display: flex;
-  justify-content: space-between;
   width: 100%;
-  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 30px;
 }
 
 .content-4,
 .content-5,
+.content-6,
 .content-7,
 .content-8,
 .content-9,
@@ -115,11 +187,15 @@
   gap: 20px;
 }
 
+.content-6 {
+}
+
 .learning-outcomes-container {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
-  gap: 50px;
+  gap: calc(30px + 20 * (100vw / 1920));
 }
 
 .content-10 .partners-container {
@@ -127,19 +203,21 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 50px;
+  gap: calc(30px + 20 * (100vw / 1920));
 }
 
 .title h1 {
-  margin: 100px 0;
-  font-size: 60px;
+  margin: calc(70px + 30 * (100vw / 1920)) 0;
+  font-size: calc(25px + 25 * (100vw / 1920));
   font-weight: 800;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .title2 h1 {
-  margin: 100px 0;
-  font-size: 40px;
+  margin: calc(70px + 30 * (100vw / 1920)) 0;
+  font-size: calc(30px + 10 * (100vw / 1920));
   font-weight: 800;
   text-transform: uppercase;
+  text-align: center;
 }

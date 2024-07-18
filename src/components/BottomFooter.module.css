@@ -1,5 +1,6 @@
 .bottom-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   padding: 40px 0;
@@ -9,6 +10,7 @@
 .container {
   width: 80%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   color: white;
   font-size: 14px;
@@ -22,7 +24,7 @@
 }
 
 .container div p:first-child {
-  font-size: 19px;
+  font-size: calc(16px + 3 * (100vw / 1920));
   font-weight: 600;
 }
 
@@ -40,4 +42,24 @@
   height: 20px;
   width: 20px;
   color: var(--header-color);
+}
+
+@media (max-width: 800px) {
+  .container {
+    gap: 10px;
+  }
+
+  .social_medias {
+    justify-content: flex-start;
+  }
+
+  .container div {
+    width: 47%;
+  }
+}
+
+@media (max-width: 640px) {
+  .container div {
+    width: 100%;
+  }
 }

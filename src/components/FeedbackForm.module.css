@@ -1,5 +1,5 @@
 .feedback-container {
-  padding: 100px 0;
+  padding: calc(20px + 80 * (100vw / 1920)) 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,7 +8,9 @@
 .feedback {
   width: 90%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+  gap: 30px;
 }
 
 .feedback .links {
@@ -28,7 +30,7 @@
 
 .feedback .links * * {
   width: 100%;
-  font-size: 22px;
+  font-size: calc(16px + 6 * (100vw / 1920));
   font-weight: 500;
 }
 
@@ -40,12 +42,14 @@ form {
 }
 
 form label {
-  font-size: 45px;
+  font-size: calc(20px + 25 * (100vw / 1920));
   font-weight: bold;
 }
 
 form .form-center {
   display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
@@ -66,4 +70,27 @@ textarea {
 form > input:last-child {
   background-color: var(--primary-color);
   color: var(--header-color);
+}
+
+@media (max-width: 1024px) {
+  form .form-center input {
+    width: 100%;
+  }
+}
+
+@media (max-width: 800px) {
+  .feedback .links {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  form .form-center input {
+    width: 100%;
+  }
 }
