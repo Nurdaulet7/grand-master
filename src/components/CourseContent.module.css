@@ -7,4 +7,5 @@
 .content {
   margin-top: 140px;
   width: 100%;
+  background-color: var(--header-color);
 }

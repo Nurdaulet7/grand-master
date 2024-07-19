@@ -9,7 +9,7 @@
   width: 90%;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: first baseline;
   justify-content: space-between;
 }
 
@@ -27,12 +27,12 @@
 }
 
 .course-details__title {
-  font-size: 50px;
+  font-size: calc(23px + 27 * (100vw / 1920));
   font-weight: 700;
 }
 
 .course-details__text {
-  font-size: 24px;
+  font-size: calc(18px + 6 * (100vw / 1920));
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -49,41 +49,43 @@
 }
 
 .course-details__course-content > p {
-  font-size: 13px;
+  font-size: calc(14px + 2 * (100vw / 1920));
 }
 
 .couse-details__sidebar {
   width: 30%;
-  border-radius: 10px;
-  background-color: var(--card-background-color);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
 .price-card {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
   padding: 20px;
+  background-color: var(--body-color);
+  border-radius: 10px;
 }
 
 .price-card h3 {
-  font-size: 25px;
+  font-size: calc(20px + 5 * (100vw / 1920));
   font-weight: 800;
 }
 
 .price-card__month-cost {
   display: flex;
   flex-direction: column;
-  gap: 10px;
 }
 
 .price-card h4 {
-  font-size: 40px;
+  font-size: calc(30px + 10 * (100vw / 1920));
   font-weight: bold;
 }
 
 .payment-option-card {
   display: flex;
-  gap: 20px;
+  gap: 40px;
 }
 
 .payment-option-card__inner {
@@ -92,9 +94,72 @@
   gap: 10px;
 }
 
+.text-with-dot {
+  font-size: calc(14px + 2 * (100vw / 1920));
+}
+
 .text-with-dot::before {
   content: "\00b7"; /* HTML Entity для точки (•) */
   margin-right: 8px;
   font-size: 20px;
   font-weight: 900;
+}
+
+.currency {
+  font-size: 15px;
+  position: relative;
+  top: calc(-30px + 10 * (100vw / 1920));
+}
+
+.payment-option-card__text {
+  font-weight: 700;
+  color: #8e979d;
+}
+
+.skills-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  background-color: var(--body-color);
+  border-radius: 10px;
+}
+
+.skills-card h2 {
+  font-size: 40px;
+  font-weight: 500;
+}
+
+ul {
+  list-style: none; /* Убираем стандартные маркеры */
+  counter-reset: list-counter; /* Сбрасываем счетчик */
+}
+
+ul li {
+  counter-increment: list-counter; /* Увеличиваем счетчик */
+  position: relative; /* Для псевдоэлемента */
+  padding-bottom: 20px;
+  padding-left: 20px; /* Отступ слева для номера */
+}
+
+ul li::before {
+  content: counter(list-counter) ". "; /* Вставляем номер и точку */
+  position: absolute;
+  left: 0;
+}
+
+@media (max-width: 1024px) {
+  .couse-details__sidebar {
+    width: 35%;
+  }
+}
+
+@media (max-width: 800px) {
+  .course-details__info {
+    width: 100%;
+  }
+
+  .couse-details__sidebar {
+    width: 100%;
+  }
 }

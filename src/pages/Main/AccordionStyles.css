@@ -58,7 +58,7 @@ article span {
 .not-upper-case-text h2,
 .not-upper-case-text p {
   text-transform: none;
-  font-size: 15px;
+  font-size: calc(10px + 5 * (100vw / 1920));
 }
 
 #arrowDown {

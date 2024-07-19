@@ -1,7 +1,7 @@
 import React from "react";
-import ConsultationForm from "./ConsultationForm";
 import FeedbackForm from "./FeedbackForm";
 import BottomFooter from "./BottomFooter";
+import { ConsultationForm } from "./ConsultationForm";
 
 const Footer = () => {
   return (

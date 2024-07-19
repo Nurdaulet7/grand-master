@@ -3,6 +3,7 @@ import styles from "./CourseDetails.module.css";
 import Accordion from "../pages/Main/Accordian";
 import kaspi from "../images/kaspiLogo.png";
 import jusan from "../images/jusanLogo.png";
+import { Form } from "./ConsultationForm";
 
 const CourseDetails = () => {
   return (
@@ -49,11 +50,15 @@ const CourseDetails = () => {
           <div className={styles["price-card"]}>
             <h3>Стоимость обучения:</h3>
             <div className={styles["price-card__total-cost"]}>
-              <h4>480 000 ₸</h4>
+              <h4>
+                480 000<span className={styles["currency"]}>₸</span>
+              </h4>
               <p className={styles["text-with-dot"]}>Полная стоимость</p>
             </div>
             <div className={styles["price-card__month-cost"]}>
-              <h4>80 000 ₸/мес.</h4>
+              <h4>
+                80 000<span className={styles["currency"]}>₸/мес.</span>
+              </h4>
               <div className={styles["payment-option-card"]}>
                 <div className={styles["payment-option-card__inner"]}>
                   <img src={kaspi} alt="" />
@@ -70,8 +75,32 @@ const CourseDetails = () => {
               </div>
             </div>
           </div>
-          <div className={styles["form"]}></div>
-          <div className={styles["skills-card"]}></div>
+          <div className={styles["form"]}>
+            <Form forCoursePage={true} />
+          </div>
+          <div className={styles["skills-card"]}>
+            <h2>Навыки</h2>
+            <div className={styles["skills-card__inner"]}>
+              <ul>
+                <li>
+                  HTML и CSS: Понимание основ разметки и стилей веб-страниц с
+                  использованием HTML для структурирования контента и CSS для
+                  оформления и стилизации.
+                </li>
+                <li>
+                  Верстка и дизайн: Умение создавать адаптивный и
+                  кроссбраузерный дизайн с помощью CSS и знание основных
+                  принципов веб-дизайна для создания пользовательских
+                  интерфейсов.
+                </li>
+                <li>
+                  JavaScript: Основы программирования на JavaScript, включая
+                  работу с переменными, условиями, циклами, функциями,
+                  объектами, массивами, событиями и DOM (Document Object Model).
+                </li>
+              </ul>
+            </div>
+          </div>
         </aside>
       </div>
     </section>

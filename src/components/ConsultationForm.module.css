@@ -47,12 +47,46 @@
   font-size: 12px;
 }
 
+.course-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  background-color: var(--body-color);
+}
+
+.course-form form {
+  width: 100%;
+}
+
+.course-form h1 {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.course-form p {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.course-form form input {
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
 @media (max-width: 1280px) {
   .consultation-container .form-container form input {
     width: 30%;
   }
 
   .consultation-container .form-container form input:last-child {
+    width: 100%;
+  }
+
+  .course-form .form-container form input {
     width: 100%;
   }
 }

@@ -24,6 +24,6 @@
 body {
   font-family: "Montserrat", sans-serif;
   height: 100vh;
-  background-color: var(--body-color);
+  /* background-color: var(--body-color); */
   transition: var(--tran-04);
 }
