@@ -42,12 +42,21 @@ const faqs = [
   },
 ];
 
-const AccordionItem = ({ handleToggle, active, faq }) => {
+const AccordionItem = ({
+  handleToggle,
+  active,
+  faq,
+  forCoursePage = false,
+}) => {
   const contentEl = useRef(null);
   const { header, id, text } = faq;
 
   return (
-    <div className="rc-accordion-card">
+    <div
+      className={`${"rc-accordion-card"} ${
+        forCoursePage ? "not-upper-case-text" : ""
+      }`}
+    >
       <header
         className={active === id ? "active" : ""}
         onClick={() => handleToggle(id)}
@@ -72,7 +81,7 @@ const AccordionItem = ({ handleToggle, active, faq }) => {
   );
 };
 
-const Accordion = () => {
+const Accordion = ({ forCoursePage = false }) => {
   const [active, setActive] = useState(null);
 
   const handleToggle = (id) => {
@@ -87,6 +96,7 @@ const Accordion = () => {
           active={active}
           handleToggle={handleToggle}
           faq={faq}
+          forCoursePage={forCoursePage}
         />
       ))}
     </article>

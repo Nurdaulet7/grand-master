@@ -9,7 +9,7 @@ import {
   FaTelegramPlane,
 } from "react-icons/fa";
 
-function Header() {
+function Header({ hasbutton = false }) {
   return (
     <div className={styles.header}>
       <div className={styles.topHeader}>
@@ -50,9 +50,14 @@ function Header() {
         </div>
       </div>
       <div className={styles.bottomHeader}>
-        <div className={styles.bottom_content}>
-          <img src={logo} alt="logo" />
-          <p>Meta school</p>
+        <div className={styles.bottomHeader_logo}>
+          <div className={styles.bottomHeader_logo_link}>
+            <a href="/">
+              <img src={logo} alt="logo" />
+            </a>
+            <p>Meta school</p>
+          </div>
+          {!hasbutton && <button>Получить консультацию</button>}
         </div>
       </div>
     </div>

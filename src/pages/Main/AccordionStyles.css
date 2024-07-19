@@ -55,6 +55,12 @@ article span {
   transition: 0.3s;
 }
 
+.not-upper-case-text h2,
+.not-upper-case-text p {
+  text-transform: none;
+  font-size: 15px;
+}
+
 #arrowDown {
   display: flex;
   align-items: center;

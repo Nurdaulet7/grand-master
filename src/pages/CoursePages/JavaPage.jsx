@@ -1,16 +1,16 @@
 import React from "react";
 import Header from "../../components/Header";
-import MainContent from "./MainContent";
 import Footer from "../../components/Footer";
+import CourseContent from "../../components/CourseContent";
 
-function Main() {
+const JavaPage = () => {
   return (
     <div>
-      <Header hasbutton />
-      <MainContent />
+      <Header />
+      <CourseContent />
       <Footer />
     </div>
   );
-}
+};
 
-export default Main;
+export default JavaPage;
