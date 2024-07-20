@@ -3,12 +3,12 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import CourseContent from "../../components/CourseContent";
 import CourseContext from "../../context/CourseContext";
-import coursePng from "../../images/coursePng2.png";
+import coursePng from "../../images/coursePng3.png";
 
-let javaPageData = {
-  topic: "Java-разработчик с нуля",
+let systemAdminPageData = {
+  topic: "Системный администратор",
   description:
-    "Курс 'Java-разработчик с нуля' представляет собой интенсивную программу обучения, специально разработанную для тех, кто хочет освоить программирование на языке Java и стать востребованным специалистом в области разработки программного обеспечения. Независимо от вашего уровня начальных знаний, этот курс предоставит вам все необходимые инструменты и знания для успешного старта в мире Java-разработки.",
+    "Курс системного администратора предназначен для обучения участников ключевым навыкам и концепциям, необходимым для эффективного управления и поддержки информационных систем. Курс охватывает широкий спектр тем, включая основы операционных систем, сетевые технологии, управление серверами, информационную безопасность, управление базами данных, скриптование и автоматизацию, а также мониторинг и отладку. Этот курс идеально подходит для тех, кто стремится стать системным администратором или для тех, кто уже работает в области IT и хочет улучшить свои навыки и знания.",
   img: coursePng,
   program: {
     duration: "26 недель 3 урока в неделях",
@@ -19,32 +19,32 @@ let javaPageData = {
   courseContent: [
     {
       id: 1,
-      header: "1-4 неделя Введение",
+      header: "1-4 неделя Введение в системное администрирование",
       text: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam molestiae laudantium illo ipsa dolorum earum molestias amet placeat quidem error.",
     },
     {
       id: 2,
-      header: "5-8 неделя Выполнение операций",
+      header: "5-8 неделя Работа с операционными системами",
       text: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam molestiae laudantium illo ipsa dolorum earum molestias amet placeat quidem error.",
     },
     {
       id: 3,
-      header: "5-8 неделя Создание операторов",
+      header: "9-12 неделя Автоматизация задач системного администратора",
       text: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam molestiae laudantium illo ipsa dolorum earum molestias amet placeat quidem error.",
     },
     {
       id: 4,
-      header: "13-16 неделя Работа с данными",
+      header: "13-16 неделя Сетевые технологии и безопасность",
       text: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam molestiae laudantium illo ipsa dolorum earum molestias amet placeat quidem error.",
     },
     {
       id: 5,
-      header: "17-20 неделя Создание классов",
+      header: "17-20 неделя Мониторинг и логирование",
       text: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam molestiae laudantium illo ipsa dolorum earum molestias amet placeat quidem error.",
     },
     {
       id: 6,
-      header: "20-26 неделя Развертывание программ",
+      header: "20-26 неделя Разработка и поддержка инфраструктуры",
       text: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam molestiae laudantium illo ipsa dolorum earum molestias amet placeat quidem error.",
     },
   ],
@@ -53,10 +53,10 @@ let javaPageData = {
     forMonth: "80 000",
   },
   skills: [
-    "Понимание синтаксиса и основных концепций языка Java",
-    "Умение манипулировать данными, используя массивы, списки и другие структуры данных.",
-    "Создание многопоточных приложений для оптимизации производительности",
-    "Создание, управление и оптимизация баз данных с использованием SQL и JDBC",
+    "Умение настраивать различные операционные системы",
+    "Настраивать и поддерживать сетевые подключения и оборудование.",
+    "Понимание принципов безопасности информации и способность настраивать механизмы защиты, чтобы обеспечить безопасность системы.",
+    "Готовность к постоянному профессиональному развитию и обновлению знаний в сфере информационных технологий.",
   ],
   goal: "'Веб-разработчик для начинающих' заключается в том, чтобы обеспечить студентов всеми необходимыми знаниями, навыками и практическим опытом для успешной карьеры в области веб-разработки. Основной упор делается на том, чтобы подготовить студентов к созданию и поддержке современных веб-сайтов и веб-приложений, а также обеспечить их способностью адаптироваться к быстро меняющейся среде технологий.",
   tasks: [
@@ -71,11 +71,11 @@ let javaPageData = {
   ],
 };
 
-const JavaPage = () => {
+const SystemAdmin = () => {
   const { setCourseData } = useContext(CourseContext);
 
   useEffect(() => {
-    setCourseData(javaPageData);
+    setCourseData(systemAdminPageData);
   }, [setCourseData]);
 
   return (
@@ -87,4 +87,4 @@ const JavaPage = () => {
   );
 };
 
-export default JavaPage;
+export default SystemAdmin;

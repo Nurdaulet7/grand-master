@@ -1,7 +1,10 @@
 .course-details {
   width: 100%;
   display: flex;
+  gap: 30px;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   margin: 40px 0;
 }
 
@@ -126,7 +129,7 @@
 }
 
 .skills-card h2 {
-  font-size: 40px;
+  font-size: calc(20px + 20 * (100vw / 1920));
   font-weight: 500;
 }
 
@@ -146,6 +149,14 @@ ul li::before {
   content: counter(list-counter) ". "; /* Вставляем номер и точку */
   position: absolute;
   left: 0;
+}
+
+.course-goal {
+  width: 90%;
+}
+
+.course-tasks {
+  width: 90%;
 }
 
 @media (max-width: 1024px) {

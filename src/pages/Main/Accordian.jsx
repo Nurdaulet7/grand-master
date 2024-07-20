@@ -81,16 +81,19 @@ const AccordionItem = ({
   );
 };
 
-const Accordion = ({ forCoursePage = false }) => {
+const Accordion = ({ forCoursePage = false, data = [] }) => {
   const [active, setActive] = useState(null);
 
   const handleToggle = (id) => {
     setActive(active === id ? null : id);
   };
 
+  // Используем данные из props или дефолтные данные
+  const accordionData = data.length > 0 ? data : faqs;
+
   return (
     <article>
-      {faqs.map((faq) => (
+      {accordionData.map((faq) => (
         <AccordionItem
           key={faq.id}
           active={active}

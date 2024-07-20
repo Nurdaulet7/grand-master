@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "./CourseDetails.module.css";
 import Accordion from "../pages/Main/Accordian";
 import kaspi from "../images/kaspiLogo.png";
 import jusan from "../images/jusanLogo.png";
 import { Form } from "./ConsultationForm";
+import CourseGoal from "./CourseGoal";
+import CourseTasks from "./CourseTasks";
 
-const CourseDetails = () => {
+const CourseDetails = ({ courseData }) => {
+  if (!courseData || !courseData.program) {
+    return <div>Loading...</div>; // или вернуть что-то другое, если данных нет
+  }
   return (
     <section className={styles["course-details"]}>
       <div className={styles["course-details__content"]}>
@@ -14,22 +19,22 @@ const CourseDetails = () => {
             <h2 className={styles["course-details__title"]}>Программа</h2>
             <div className={styles["course-details__text"]}>
               <p>
-                <span className={styles.boldText}>Длительность курса:</span> 26
-                недель 3 урока в неделях
+                <span className={styles.boldText}>Длительность курса:</span>{" "}
+                {courseData.program.duration}
               </p>
               <p>
                 <span className={styles.boldText}>
                   Длительность академических часов:
                 </span>{" "}
-                156 часов
+                {courseData.program.hours}
               </p>
               <p>
-                <span className={styles.boldText}>Формат обучения:</span> 26
-                недель 3 урока в неделях
+                <span className={styles.boldText}>Формат обучения:</span>{" "}
+                {courseData.program.format}
               </p>
               <p>
-                <span className={styles.boldText}>Формы занятий:</span> 26
-                недель 3 урока в неделях
+                <span className={styles.boldText}>Формы занятий:</span>{" "}
+                {courseData.program.sessionFormat}
               </p>
             </div>
           </div>
@@ -43,7 +48,7 @@ const CourseDetails = () => {
               создадите впечатляющее портфолио и получите конструктивную
               обратную связь.
             </p>
-            <Accordion forCoursePage />
+            <Accordion forCoursePage data={courseData.courseContent} />
           </div>
         </div>
         <aside className={styles["couse-details__sidebar"]}>
@@ -82,26 +87,19 @@ const CourseDetails = () => {
             <h2>Навыки</h2>
             <div className={styles["skills-card__inner"]}>
               <ul>
-                <li>
-                  HTML и CSS: Понимание основ разметки и стилей веб-страниц с
-                  использованием HTML для структурирования контента и CSS для
-                  оформления и стилизации.
-                </li>
-                <li>
-                  Верстка и дизайн: Умение создавать адаптивный и
-                  кроссбраузерный дизайн с помощью CSS и знание основных
-                  принципов веб-дизайна для создания пользовательских
-                  интерфейсов.
-                </li>
-                <li>
-                  JavaScript: Основы программирования на JavaScript, включая
-                  работу с переменными, условиями, циклами, функциями,
-                  объектами, массивами, событиями и DOM (Document Object Model).
-                </li>
+                {courseData.skills.map((text, index) => (
+                  <li key={index}>{text}</li>
+                ))}
               </ul>
             </div>
           </div>
         </aside>
+      </div>
+      <div className={styles["course-goal"]}>
+        <CourseGoal courseData={courseData} />
+      </div>
+      <div className={styles["course-tasks"]}>
+        <CourseTasks courseData={courseData} />
       </div>
     </section>
   );

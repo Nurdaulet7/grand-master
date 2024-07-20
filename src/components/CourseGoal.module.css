@@ -1,0 +1,65 @@
+.course-goal {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.course-goal__text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 55%;
+}
+
+.course-goal__text h1 {
+  font-size: calc(23px + 27 * (100vw / 1920));
+  font-weight: bold;
+}
+
+.course-goal__text p {
+  font-size: calc(14px + 2 * (100vw / 1920));
+  font-weight: 600;
+}
+
+.course-goal__image {
+  width: 30%;
+}
+
+.course-goal__image img {
+  width: 100%;
+  max-width: 350px;
+  max-height: 350px;
+}
+
+@media (max-width: 1280px) {
+  .course-goal__text {
+    width: 60%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .course-goal__text {
+    width: 65%;
+  }
+}
+
+@media (max-width: 800px) {
+  .course-goal {
+    justify-content: center;
+  }
+
+  .course-goal__text {
+    width: 100%;
+  }
+
+  .course-goal__image {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/* (max-width: 800px)
+(max-width: 1024px)
+(max-width: 1280px) */
