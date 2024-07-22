@@ -159,6 +159,10 @@ ul li::before {
   width: 90%;
 }
 
+.course-criteria {
+  width: 90%;
+}
+
 @media (max-width: 1024px) {
   .couse-details__sidebar {
     width: 35%;

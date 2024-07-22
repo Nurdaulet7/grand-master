@@ -6,6 +6,7 @@ import jusan from "../images/jusanLogo.png";
 import { Form } from "./ConsultationForm";
 import CourseGoal from "./CourseGoal";
 import CourseTasks from "./CourseTasks";
+import CourseCriteria from "./CourseCriteria";
 
 const CourseDetails = ({ courseData }) => {
   if (!courseData || !courseData.program) {
@@ -100,6 +101,9 @@ const CourseDetails = ({ courseData }) => {
       </div>
       <div className={styles["course-tasks"]}>
         <CourseTasks courseData={courseData} />
+      </div>
+      <div className={styles["course-criteria"]}>
+        <CourseCriteria courseData={courseData} />
       </div>
     </section>
   );
