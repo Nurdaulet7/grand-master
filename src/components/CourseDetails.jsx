@@ -7,6 +7,7 @@ import { Form } from "./ConsultationForm";
 import CourseGoal from "./CourseGoal";
 import CourseTasks from "./CourseTasks";
 import CourseCriteria from "./CourseCriteria";
+import AboutCourse from "./AboutCourse";
 
 const CourseDetails = ({ courseData }) => {
   if (!courseData || !courseData.program) {
@@ -104,6 +105,9 @@ const CourseDetails = ({ courseData }) => {
       </div>
       <div className={styles["course-criteria"]}>
         <CourseCriteria courseData={courseData} />
+      </div>
+      <div className={styles["course-description"]}>
+        <AboutCourse courseData={courseData} />
       </div>
     </section>
   );
