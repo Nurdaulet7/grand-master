@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import styles from "./Header.module.css";
 import logo from "../images/logo-grand-park.png";
 import { IoMailOutline, IoCallOutline } from "react-icons/io5";
@@ -9,9 +9,17 @@ import {
   FaTelegramPlane,
 } from "react-icons/fa";
 
-function Header({ hasbutton = false }) {
+function Header({ hasbutton = false, onHeightChange }) {
+  const headerRef = useRef(null);
+
+  useEffect(() => {
+    if (headerRef.current && onHeightChange) {
+      onHeightChange(headerRef.current.offsetHeight);
+    }
+  }, [onHeightChange]);
+
   return (
-    <div className={styles.header}>
+    <div className={styles.header} ref={headerRef}>
       <div className={styles.topHeader}>
         <div className={styles["top-header-row"]}>
           <div className={styles.mail}>

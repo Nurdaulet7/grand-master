@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./FeedbackForm.module.css";
+import { NavLink } from "react-router-dom";
 
 const sendEmail = (e) => {
   e.preventDefault();
@@ -11,11 +12,11 @@ const FeedbackForm = () => {
       <div className={styles["feedback"]}>
         <div className={styles["links"]}>
           <div className={styles["course-links"]}>
-            <a href="/">Веб-разработчик с нуля</a>
-            <a href="/">Системный администратор</a>
-            <a href="/">Front-end разработчик</a>
-            <a href="/">Java-разработчик с нуля</a>
-            <a href="/">Python-разработчик</a>
+            <NavLink to={"/webdev"}>Веб-разработчик с нуля</NavLink>
+            <NavLink to={"/system-admin"}>Системный администратор</NavLink>
+            <NavLink to={"/front"}>Front-end разработчик</NavLink>
+            <NavLink to={"/java"}>Java-разработчик с нуля</NavLink>
+            <NavLink to={"/python"}>Python-разработчик</NavLink>
           </div>
           <div className={styles["contacts"]}>
             <a href="/">Наша команда</a>

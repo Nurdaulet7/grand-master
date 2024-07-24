@@ -1,0 +1,107 @@
+.specialist-info {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.specialist-info__title {
+  width: 52%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.specialist-info__title h1 {
+  font-size: calc(23px + 27 * (100vw / 1920));
+}
+
+.specialist-info__title h3 {
+  font-size: calc(20px + 10 * (100vw / 1920));
+}
+
+.specialist-info__list li {
+  font-size: calc(16px + 9 * (100vw / 1920));
+}
+
+.specialist-info__list {
+  counter-reset: item;
+}
+
+.specialist-info__salary {
+  width: 45%;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.specialist-info__salary h2 {
+  font-size: calc(20px + 10 * (100vw / 1920));
+}
+
+.specialist-info__salary__inner {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.specialist-info__salary__inner__card {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 15px;
+  border: 3px solid var(--primary-color);
+  border-radius: 30px;
+}
+
+.specialist-info__salary__inner__card h3 {
+  font-size: calc(13px + 2 * (100vw / 1920));
+}
+
+.specialist-info__salary__inner__card p {
+  font-size: calc(23px + 27 * (100vw / 1920));
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.specialist-info__salary__inner__card img {
+  max-width: 150px;
+}
+
+@media (max-width: 1280px) {
+  .specialist-info__title {
+    width: 45%;
+  }
+
+  .specialist-info__salary {
+    width: 52%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .specialist-info__title {
+    width: 100%;
+  }
+
+  .specialist-info__salary {
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .specialist-info__salary__inner__card {
+    width: 100%;
+  }
+  .specialist-info__salary__inner__card p {
+    font-size: 40px;
+  }
+}

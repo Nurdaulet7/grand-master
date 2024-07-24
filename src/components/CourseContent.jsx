@@ -3,16 +3,15 @@ import styles from "./CourseContent.module.css";
 import CourseIntro from "./CourseIntro";
 import CourseDetails from "./CourseDetails";
 import CourseContext from "../context/CourseContext";
-import CourseGoal from "./CourseGoal";
 
-const CourseContent = () => {
+const CourseContent = ({ headerHeight }) => {
   const { courseData } = useContext(CourseContext);
 
   if (!courseData) {
     return <div>Loading...</div>;
   }
   return (
-    <main className={styles["content"]}>
+    <main className={styles["content"]} style={{ marginTop: headerHeight }}>
       <CourseIntro courseData={courseData} />
       <CourseDetails courseData={courseData} />
     </main>

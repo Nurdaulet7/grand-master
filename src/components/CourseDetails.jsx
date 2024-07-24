@@ -8,6 +8,8 @@ import CourseGoal from "./CourseGoal";
 import CourseTasks from "./CourseTasks";
 import CourseCriteria from "./CourseCriteria";
 import AboutCourse from "./AboutCourse";
+import CourseLearnings from "./CourseLearnings";
+import SpecialistInfo from "./SpecialistInfo";
 
 const CourseDetails = ({ courseData }) => {
   if (!courseData || !courseData.program) {
@@ -108,6 +110,12 @@ const CourseDetails = ({ courseData }) => {
       </div>
       <div className={styles["course-description"]}>
         <AboutCourse courseData={courseData} />
+      </div>
+      <div className={styles["course-learnings"]}>
+        <CourseLearnings courseData={courseData} />
+      </div>
+      <div className={styles["course-specialist-info"]}>
+        <SpecialistInfo courseData={courseData} />
       </div>
     </section>
   );

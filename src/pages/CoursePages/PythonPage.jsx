@@ -5,7 +5,7 @@ import CourseContent from "../../components/CourseContent";
 import CourseContext from "../../context/CourseContext";
 import coursePng from "../../images/coursePng2.png";
 
-let javaPageData = {
+let data = {
   topic: "Java-разработчик с нуля",
   description:
     "Курс 'Java-разработчик с нуля' представляет собой интенсивную программу обучения, специально разработанную для тех, кто хочет освоить программирование на языке Java и стать востребованным специалистом в области разработки программного обеспечения. Независимо от вашего уровня начальных знаний, этот курс предоставит вам все необходимые инструменты и знания для успешного старта в мире Java-разработки.",
@@ -149,12 +149,12 @@ let javaPageData = {
   },
 };
 
-const JavaPage = () => {
+const PythonPage = () => {
   const { setCourseData } = useContext(CourseContext);
   const [headerHeight, setHeaderHeight] = useState(0);
 
   useEffect(() => {
-    setCourseData(javaPageData);
+    setCourseData(data);
   }, [setCourseData]);
 
   return (
@@ -166,4 +166,4 @@ const JavaPage = () => {
   );
 };
 
-export default JavaPage;
+export default PythonPage;

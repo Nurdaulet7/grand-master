@@ -167,6 +167,14 @@ ul li::before {
   width: 90%;
 }
 
+.course-learnings {
+  width: 90%;
+}
+
+.course-specialist-info {
+  width: 90%;
+}
+
 @media (max-width: 1024px) {
   .couse-details__sidebar {
     width: 35%;
