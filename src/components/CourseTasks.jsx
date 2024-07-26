@@ -12,7 +12,10 @@ const CourseTasks = ({ courseData }) => {
       <div className={styles["course-tasks__container"]}>
         {courseData.tasks.map((task, index) => {
           return (
-            <div className={styles["course-tasks__container__inner"]}>
+            <div
+              key={index}
+              className={styles["course-tasks__container__inner"]}
+            >
               <div className={styles["course-tasks__container__inner__card"]}>
                 <h2>{String(index + 1).padStart(2, "0")}</h2>
                 <p>{task}</p>

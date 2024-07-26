@@ -3,12 +3,12 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import CourseContent from "../../components/CourseContent";
 import CourseContext from "../../context/CourseContext";
-import coursePng from "../../images/coursePng2.png";
+import coursePng from "../../images/frontend.png";
 
 let data = {
-  topic: "Java-разработчик с нуля",
+  topic: "Frond-end разработчик",
   description:
-    "Курс 'Java-разработчик с нуля' представляет собой интенсивную программу обучения, специально разработанную для тех, кто хочет освоить программирование на языке Java и стать востребованным специалистом в области разработки программного обеспечения. Независимо от вашего уровня начальных знаний, этот курс предоставит вам все необходимые инструменты и знания для успешного старта в мире Java-разработки.",
+    "Курс по Front-end разработке предназначен для обучения созданию интерактивных и визуально привлекательных веб-страниц и приложений. Участники курса научатся использовать основные технологии веб-разработки, такие как HTML, CSS, и JavaScript, а также познакомятся с современными фреймворками и библиотеками, включая React, Angular или Vue.js.",
   img: coursePng,
   program: {
     duration: "26 недель 3 урока в неделях",

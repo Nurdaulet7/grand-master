@@ -16,7 +16,7 @@ const AboutCourse = ({ courseData }) => {
       </p>
       <div className={styles["course-work__inner"]}>
         {courseData.workTypes.map((work, index) => (
-          <div className={styles["course-work__inner__card"]}>
+          <div key={index} className={styles["course-work__inner__card"]}>
             <img src={workImages[index]} alt="workPng" />
             <h2>{work.title}</h2>
             <p>{work.text}</p>

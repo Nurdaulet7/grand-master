@@ -29,6 +29,7 @@ const CourseCriteria = ({ courseData }) => {
             index % 2 === 1 ? styles["mb-reverse"] : "";
           return (
             <div
+              key={index}
               className={cn(
                 styles["course-criteria__container__inner"],
                 reverseClass,

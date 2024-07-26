@@ -99,22 +99,22 @@ const CourseDetails = ({ courseData }) => {
           </div>
         </aside>
       </div>
-      <div className={styles["course-goal"]}>
+      <div className={styles["course-width"]}>
         <CourseGoal courseData={courseData} />
       </div>
-      <div className={styles["course-tasks"]}>
+      <div className={styles["course-width"]}>
         <CourseTasks courseData={courseData} />
       </div>
-      <div className={styles["course-criteria"]}>
+      <div className={styles["course-width"]}>
         <CourseCriteria courseData={courseData} />
       </div>
-      <div className={styles["course-description"]}>
+      <div className={styles["course-width"]}>
         <AboutCourse courseData={courseData} />
       </div>
-      <div className={styles["course-learnings"]}>
+      <div className={styles["course-width"]}>
         <CourseLearnings courseData={courseData} />
       </div>
-      <div className={styles["course-specialist-info"]}>
+      <div className={styles["course-width"]}>
         <SpecialistInfo courseData={courseData} />
       </div>
     </section>

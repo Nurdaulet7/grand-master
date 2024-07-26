@@ -21,11 +21,11 @@
 
 .intro-section__image-container {
   width: 30%;
-  max-width: 450px;
 }
 
 .intro-section__image-container img {
-  width: 100%;
+  max-width: 350px;
+  max-height: 350px;
 }
 
 .intro-section__text-container {

@@ -15,7 +15,7 @@ const CourseLearnings = ({ courseData }) => {
       </div>
       <div className={styles["course-learnings__list"]}>
         {courseData.courseLearnings.map((learning, index) => (
-          <div className={styles["course-learnings__list__item"]}>
+          <div key={index} className={styles["course-learnings__list__item"]}>
             <div className={styles["course-learnings__list__item__inner"]}>
               <p>{index + 1}</p>
               <div className={styles["course-learnings__list__item__text"]}>

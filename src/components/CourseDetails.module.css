@@ -151,27 +151,7 @@ ul li::before {
   left: 0;
 }
 
-.course-goal {
-  width: 90%;
-}
-
-.course-tasks {
-  width: 90%;
-}
-
-.course-criteria {
-  width: 90%;
-}
-
-.course-description {
-  width: 90%;
-}
-
-.course-learnings {
-  width: 90%;
-}
-
-.course-specialist-info {
+.course-width {
   width: 90%;
 }
 
