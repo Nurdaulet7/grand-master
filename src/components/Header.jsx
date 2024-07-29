@@ -36,7 +36,6 @@ function Header({ hasbutton = false, onHeightChange }) {
                 </span>
                 <p>+7 (778) 735-30-10</p>
               </div>
-              {/* <p>+7 (778) 735-30-10</p> */}
             </div>
           </div>
           <div className={styles.social_medias}>

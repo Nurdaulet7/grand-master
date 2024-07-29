@@ -13,7 +13,7 @@ import SpecialistInfo from "./SpecialistInfo";
 
 const CourseDetails = ({ courseData }) => {
   if (!courseData || !courseData.program) {
-    return <div>Loading...</div>; // или вернуть что-то другое, если данных нет
+    return <div>Loading...</div>;
   }
   return (
     <section className={styles["course-details"]}>
